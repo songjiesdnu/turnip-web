@@ -18,6 +18,11 @@
 	</properties>
 
 	<dependencies>
+		<!-- <dependency>
+			<groupId>info.songjie365.secure</groupId>
+			<artifactId>anti-xss</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
 
 		<dependency>
 			<groupId>com.robot</groupId>
