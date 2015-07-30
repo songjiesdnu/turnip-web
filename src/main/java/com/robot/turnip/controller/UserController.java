@@ -19,8 +19,8 @@ public class UserController {
 	
 	@RequestMapping("/showUser")
 	public String showUser(HttpServletRequest request,Model model){
-		int userId = Integer.parseInt(request.getParameter("id"));
-		User user = this.userService.getUserById(userId);
+		String userId = request.getParameter("id");
+		User user = this.userService.selectByPrimaryKey(userId);
 		model.addAttribute("user", user);
 		return "showUser";
 	}
@@ -28,8 +28,8 @@ public class UserController {
 	@RequestMapping("/showUserJson")
 	@ResponseBody
 	public User showUserJson(HttpServletRequest request,Model model){
-		int userId = Integer.parseInt(request.getParameter("id"));
-		User user = this.userService.getUserById(userId);
+		String userId = request.getParameter("id");
+		User user = this.userService.selectByPrimaryKey(userId);
 		return user;
 	}
 }

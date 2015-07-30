@@ -36,7 +36,7 @@ public class TestMyBatis {
 
 	@Test
 	public void test1() { 
-		User user = userService.getUserById(1);
+		User user = userService.selectByPrimaryKey("1");
 		logger.info("中文");
 		System.err.println("汉子");
 		// System.out.println(user.getUserName());

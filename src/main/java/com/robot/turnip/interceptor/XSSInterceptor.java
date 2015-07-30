@@ -61,7 +61,7 @@ public class XSSInterceptor extends HandlerInterceptorAdapter {
 			String key = keyIt.next();
 			String[] values = request.getParameterValues(key);
 			for(String value : values){
-				logger.debug("value:{}", value);
+				logger.debug("{}={}", key, value);
 				if(!isValid(value)){
 					logger.error("疑似xss攻击，已被拦截。URL:{}；参数:{}={}", request.getRequestURL(), key, value);
             		throw new IllegalArgumentException("疑似xss攻击，已被拦截");
