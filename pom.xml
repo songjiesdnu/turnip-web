@@ -18,15 +18,30 @@
 	</properties>
 
 	<dependencies>
-		<!-- <dependency>
-			<groupId>info.songjie365.secure</groupId>
-			<artifactId>anti-xss</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency> -->
-
 		<dependency>
 			<groupId>com.robot</groupId>
 			<artifactId>turnip-service</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Mocking tools -->
+		<dependency>
+			<groupId>org.jmockit</groupId>
+			<artifactId>jmockit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Code coverage tool -->
+		<dependency>
+			<groupId>org.jmockit</groupId>
+			<artifactId>jmockit-coverage</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -76,6 +91,11 @@
 			<artifactId>javaee-api</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+		
 		<!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
